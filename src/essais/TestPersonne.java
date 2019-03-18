@@ -12,9 +12,11 @@ public class TestPersonne {
 		AdressePostale adresse2 = new AdressePostale(8, "rue du capitole", 31000, "Toulouse");
 		
 		// Création de deux personnes
-		Personne pers1 = new Personne("Ferrat", "Jean", adresse1);
+		Personne pers1 = new Personne("Ferrat", "Jean");
+		pers1.setAdresse(adresse1);
 		
-		Personne pers2 = new Personne("Chao", "Manu", adresse2);
+		Personne pers2 = new Personne("Chao", "Manu");
+		pers2.setAdresse(adresse2);
 
 	}
 }
