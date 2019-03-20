@@ -23,7 +23,17 @@ public class TestTri {
 		list.add(new Pays("Inde", 1296834042, 1626.982));
 
 		Collections.sort(list);
+		
+		System.out.println("tri par nom :");
+		
+		for (Pays p : list) {
+			System.out.println(p);
+		}
 
+		list.sort(new PaysComparator());
+
+		System.out.println("tri par pib/hab :");
+		
 		for (Pays p : list) {
 			System.out.println(p);
 		}
