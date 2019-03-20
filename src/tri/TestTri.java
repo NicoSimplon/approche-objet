@@ -30,9 +30,17 @@ public class TestTri {
 			System.out.println(p);
 		}
 
-		list.sort(new PaysComparator());
-
 		System.out.println("tri par pib/hab :");
+		
+		list.sort(new PaysComparator());
+		
+		for (Pays p : list) {
+			System.out.println(p);
+		}
+		
+		System.out.println("tri par nb d'habitants :");
+
+		list.sort(new PaysComparator2());
 		
 		for (Pays p : list) {
 			System.out.println(p);
