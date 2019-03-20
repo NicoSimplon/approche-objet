@@ -1,6 +1,6 @@
 package sets;
 
-public class Pays {
+public class Pays implements Comparable<Pays> {
 
 	private String nom;
 	private int nbHabitant;
@@ -38,6 +38,12 @@ public class Pays {
 
 	public void setPibHabitant(double pibHabitant) {
 		this.pibHabitant = pibHabitant;
+	}
+
+	@Override
+	public int compareTo(Pays pays) {
+		int result = this.nom.compareTo(pays.getNom());
+		return result;
 	}
 
 }

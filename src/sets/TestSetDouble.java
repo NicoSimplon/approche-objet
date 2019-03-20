@@ -69,7 +69,7 @@ public class TestSetDouble {
 		while (iterator2.hasNext()) {
 			double val = iterator2.next();
 			if (val < 0.0) {
-				val = -1 * val;
+				val = -(val);
 			}
 
 			set2.add(val);

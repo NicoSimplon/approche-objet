@@ -32,7 +32,7 @@ public class TestMapPays {
 
 		Iterator ite = map.keySet().iterator();
 
-		System.out.println("Liste des clés : :");
+		System.out.println("Liste des clés :");
 		while (ite.hasNext()) {
 			System.out.println(ite.next());
 		}
@@ -44,24 +44,29 @@ public class TestMapPays {
 			System.out.println(ite2.next());
 		}
 		
-		int max = 0;
-		Pays pays = new Pays(null, max, max);
+		int min = Integer.MAX_VALUE;
+		Pays pays = new Pays(null, min, min);
 		
 		Iterator ite3 = map.values().iterator();
 
 		while (ite3.hasNext()) {
 			Pays p = (Pays) ite3.next();
 			
-			if(p.getNbHabitant() > max){
-				max = p.getNbHabitant();
+			if(p.getNbHabitant() < min){
+				min = p.getNbHabitant();
 				pays = p;
 			}
 		}
+
+		map.remove(pays.getNom());
 		
-		System.out.println("Pays avec le plus d'habitants :");
-		System.out.println(pays);
+		Iterator ite4 = map.keySet().iterator();
 		
+		System.out.println("Liste des clés : :");
 		
+		while (ite4.hasNext()) {
+			System.out.println(ite4.next());
+		}
 		
 	}
 
